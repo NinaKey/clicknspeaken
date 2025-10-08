@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+  <title>Animals Lesson - Click’n’Speak English</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="preload" as="image" href="images/WEBP/dog.webp">
+<link rel="preload" as="image" href="images/WEBP/cat.webp">
+<link rel="preload" as="image" href="images/WEBP/bird.webp">
+<link rel="preload" as="image" href="images/WEBP/fish.webp">
+<link rel="preload" as="image" href="images/WEBP/rabbit.webp">
+<link rel="preload" as="image" href="images/WEBP/chicken.webp">
+<link rel="preload" as="image" href="images/WEBP/elephant.webp">
+<link rel="preload" as="image" href="images/WEBP/duck.webp">
+<link rel="preload" as="image" href="images/WEBP/monkey.webp">
+<link rel="preload" as="image" href="images/WEBP/tiger.webp">
+<link rel="preload" as="image" href="images/WEBP/frog.webp">
+<link rel="preload" as="image" href="images/WEBP/lion.webp">
+<link rel="preload" as="image" href="images/WEBP/giraffe.webp">
+<link rel="preload" as="image" href="images/WEBP/hippo.webp">
+
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Logo" class="logo">
+    <h1>Animals Lesson</h1>
+    <nav>
+      
+      <a href="index.html">Početna</a>
+      <a href="about.html">O meni</a>
+      <a href="lessons.html">Lekcije</a>
+      <a href="games.html">Igre</a>
+      <a href="tests.html">Testovi znanja</a>
+      <a href="songs.html">Pesmice</a>
+      <a href="contact.html">Kontakt</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Dugmići za izbor moda -->
+     <h2>Klikni na životinju da naučiš njeno ime!</h2>
+    <div id="mode-select">
+      <button data-mode="simple">Reč</button>
+      <button data-mode="sentences">Rečenica</button>
+    </div>
+
+    <!-- Lekcija sa životinjama -->
+    <section id="animals">
+      
+
+      <div class="animal-box" data-word="Dog">
+        <img src="images/WEBP/dog.webp" alt="Dog"  width="100" height="100">
+        <p>Dog</p>
+      </div>
+
+      <div class="animal-box" data-word="Cat">
+        <img src="images/WEBP/cat.webp" alt="Cat"  width="100" height="100">
+        <p>Cat</p>
+      </div>
+
+      <div class="animal-box" data-word="Bird">
+        <img src="images/WEBP/bird.webp" alt="Bird"  width="100" height="100">
+        <p>Bird</p>
+      </div>
+
+      <div class="animal-box" data-word="Fish">
+        <img src="images/WEBP/fish.webp" alt="Fish"  width="100" height="100">
+        <p>Fish</p>
+      </div>
+
+      <div class="animal-box" data-word="Rabbit">
+        <img src="images/WEBP/rabbit.webp" alt="Rabbit"  width="100" height="100">
+        <p>Rabbit</p>
+      </div>
+
+      <div class="animal-box" data-word="Chicken">
+        <img src="images/WEBP/chicken.webp" alt="Chicken"  width="100" height="100">
+        <p>Chicken</p>
+      </div>
+      <div class="animal-box" data-word="Elephant">
+        <img src="images/WEBP/elephant.webp" alt="Elephant"  width="100" height="100">
+        <p>Elephant</p>
+      </div>
+      <div class="animal-box" data-word="Duck">
+        <img src="images/WEBP/duck.webp" alt="Duck"  width="100" height="100">
+        <p>Duck</p>
+      </div>
+      <div class="animal-box" data-word="Monkey">
+        <img src="images/WEBP/monkey.webp" alt="Monkey"  width="100" height="100">
+        <p>Monkey</p>
+      </div>
+      <div class="animal-box" data-word="Tiger">
+        <img src="images/WEBP/tiger.webp" alt="Tiger"  width="100" height="100">
+        <p>Tiger</p>
+      </div>
+      <div class="animal-box" data-word="Frog">
+        <img src="images/WEBP/frog.webp" alt="Frog"  width="100" height="100">
+        <p>Frog</p>
+      </div>
+      <div class="animal-box" data-word="Lion">
+        <img src="images/WEBP/lion.webp" alt="Lion"  width="100" height="100">
+        <p>Lion</p>
+      </div>
+      <div class="animal-box" data-word="Giraffe">
+        <img src="images/WEBP/giraffe.webp" alt="Giraffe"  width="100" height="100">
+        <p>Giraffe</p>
+      </div>
+      <div class="animal-box" data-word="Hippo">
+        <img src="images/WEBP/hippo.webp" alt="Hippo"  width="100" height="100">
+        <p>Hippo</p>
+      </div>
+    </section>
+
+    <!-- Ovde će se pojavljivati rečenica u Sentences modu -->
+    <p id="sentence"></p>
+  </main>
+
+  <footer>
+    <p>© 2025 Click’n’Speak English</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

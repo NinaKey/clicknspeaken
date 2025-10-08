@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+  <title>Colors Lesson - Click’n’Speak English</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Logo" class="logo">
+    <h1>Lekcija - Boje </h1>
+    <nav>
+      
+      <a href="index.html">Početna</a>
+      <a href="about.html">O meni</a>
+      <a href="lessons.html">Lekcije</a>
+      <a href="games.html">Igre</a>
+      <a href="tests.html">Testovi znanja</a>
+      <a href="songs.html">Pesmice</a>
+      <a href="contact.html">Kontakt</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Dugmići za izbor moda -->
+     <h2>Klikni na boju da naučiš njeno ime! </h2>
+    <div id="mode-select">
+      <button data-mode="simple">Reč</button>
+      <button data-mode="sentences">Rečenica</button>
+    </div>
+
+    <!-- Lekcija sa bojama -->
+    <section id="colors">
+    
+      <div class="color-box" style="background:red;">Red</div>
+      <div class="color-box" style="background:blue;">Blue</div>
+      <div class="color-box" style="background:green;">Green</div>
+      <div class="color-box" style="background:yellow; color:black;">Yellow</div>
+      <div class="color-box" style="background:white; color:black;">White</div>
+      <div class="color-box" style="background:orange;">Orange</div>
+      <div class="color-box" style="background:purple;">Purple</div>
+      <div class="color-box" style="background:pink;">Pink</div>
+      <div class="color-box" style="background:black;">Black</div>
+      <div class="color-box" style="background:grey;">Grey</div>
+      <div class="color-box" style="background:brown;">Brown</div>
+      
+    </section>
+
+    <!-- Ovde će se pojavljivati rečenica u Sentences modu -->
+    <p id="sentence"></p>
+  </main>
+
+  <footer>
+    <p>© 2025 Click’n’Speak English</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
