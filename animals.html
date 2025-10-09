@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+  <title>Animals Lesson - Click’n’Speak English</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="preload" as="image" href="animals/dog.png">
+<link rel="preload" as="image" href="animals/cat.png">
+<link rel="preload" as="image" href="animals/bird.png">
+<link rel="preload" as="image" href="animals/fish.png">
+<link rel="preload" as="image" href="animals/rabbit.png">
+<link rel="preload" as="image" href="animals/chicken.png">
+<link rel="preload" as="image" href="animals/elephant.png">
+<link rel="preload" as="image" href="animals/duck.png">
+<link rel="preload" as="image" href="animals/monkey.png">
+<link rel="preload" as="image" href="animals/tiger.png">
+<link rel="preload" as="image" href="animals/frog.png">
+<link rel="preload" as="image" href="animals/lion.png">
+<link rel="preload" as="image" href="animals/giraffe.png">
+<link rel="preload" as="image" href="animals/hippo.png">
+
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Logo" class="logo">
+    <h1>Animals Lesson</h1>
+    <nav>
+      
+      <a href="index.html">Početna</a>
+      <a href="about.html">O meni</a>
+      <a href="lessons.html">Lekcije</a>
+      <a href="games.html">Igre</a>
+      <a href="tests.html">Testovi znanja</a>
+      <a href="songs.html">Pesmice</a>
+      <a href="contact.html">Kontakt</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Dugmići za izbor moda -->
+     <h2>Klikni na životinju da naučiš njeno ime!</h2>
+    <div id="mode-select">
+      <button data-mode="simple">Reč</button>
+      <button data-mode="sentences">Rečenica</button>
+    </div>
+
+    <!-- Lekcija sa životinjama -->
+    <section id="animals">
+      
+
+      <div class="animal-box" data-word="Dog">
+        <img src="animals/dog.png" alt="Dog"  width="100" height="100">
+        <p>Dog</p>
+      </div>
+
+      <div class="animal-box" data-word="Cat">
+        <img src="animals/cat.png" alt="Cat"  width="100" height="100">
+        <p>Cat</p>
+      </div>
+
+      <div class="animal-box" data-word="Bird">
+        <img src="animals/bird.png" alt="Bird"  width="100" height="100">
+        <p>Bird</p>
+      </div>
+
+      <div class="animal-box" data-word="Fish">
+        <img src="animals/fish.png" alt="Fish"  width="100" height="100">
+        <p>Fish</p>
+      </div>
+
+      <div class="animal-box" data-word="Rabbit">
+        <img src="animals/rabbit.png" alt="Rabbit"  width="100" height="100">
+        <p>Rabbit</p>
+      </div>
+
+      <div class="animal-box" data-word="Chicken">
+        <img src="animals/chicken.png" alt="Chicken"  width="100" height="100">
+        <p>Chicken</p>
+      </div>
+      <div class="animal-box" data-word="Elephant">
+        <img src="animals/elephant.png" alt="Elephant"  width="100" height="100">
+        <p>Elephant</p>
+      </div>
+      <div class="animal-box" data-word="Duck">
+        <img src="animals/duck.png" alt="Duck"  width="100" height="100">
+        <p>Duck</p>
+      </div>
+      <div class="animal-box" data-word="Monkey">
+        <img src="animals/monkey.png" alt="Monkey"  width="100" height="100">
+        <p>Monkey</p>
+      </div>
+      <div class="animal-box" data-word="Tiger">
+        <img src="animals/tiger.png" alt="Tiger"  width="100" height="100">
+        <p>Tiger</p>
+      </div>
+      <div class="animal-box" data-word="Frog">
+        <img src="animals/frog.png" alt="Frog"  width="100" height="100">
+        <p>Frog</p>
+      </div>
+      <div class="animal-box" data-word="Lion">
+        <img src="animals/lion.png" alt="Lion"  width="100" height="100">
+        <p>Lion</p>
+      </div>
+      <div class="animal-box" data-word="Giraffe">
+        <img src="animals/giraffe.png" alt="Giraffe"  width="100" height="100">
+        <p>Giraffe</p>
+      </div>
+      <div class="animal-box" data-word="Hippo">
+        <img src="animals/hippo.png" alt="Hippo"  width="100" height="100">
+        <p>Hippo</p>
+      </div>
+    </section>
+
+    <!-- Ovde će se pojavljivati rečenica u Sentences modu -->
+    <p id="sentence"></p>
+  </main>
+
+  <footer>
+    <p>© 2025 Click’n’Speak English</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
