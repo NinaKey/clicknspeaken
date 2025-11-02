@@ -131,6 +131,10 @@ nav a:hover {
   box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
 
+
+
+
+
 /* CONTACT (contact.html) */
 .contact-box {
   margin: 20px auto;
@@ -302,9 +306,7 @@ nav a:hover {
   font-size: 22px;
 }
 
-/* Boje za različite lekcije */
-.lesson-card.colors { background: linear-gradient(135deg, #81d4fa, #4fc3f7); }
-.lesson-card.animals { background: linear-gradient(135deg, #a5d6a7, #66bb6a); }
+
 
 @media (max-width: 600px) { 
   .lessons-grid { 
@@ -1173,3 +1175,10 @@ nav a:hover {
   .quiz-options-wrap{ grid-template-columns: 1fr; }
   .quiz-question{ font-size:24px; }
 }
+
+body .lessons-grid a.lesson-card.colors  { background-image: linear-gradient(135deg,#81d4fa,#4fc3f7) !important; }
+body .lessons-grid a.lesson-card.animals { background-image: linear-gradient(135deg,#a5d6a7,#66bb6a) !important; }
+body .lessons-grid a.lesson-card.numbers { background-image: linear-gradient(135deg,#ffd36e,#ff9a3c) !important; }
+body .lessons-grid a.lesson-card.abc     { background-image: linear-gradient(135deg,#8ec5fc,#e0c3fc) !important; }
+body .lessons-grid a.lesson-card.fruits  { background-image: linear-gradient(135deg,#ffb347,#ffcc33) !important; }
+body .lessons-grid a.lesson-card.family  { background-image: linear-gradient(135deg,#f48fb1,#f06292) !important; }

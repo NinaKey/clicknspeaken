@@ -348,10 +348,7 @@ function updateNumberHeader(){
   if (el) el.textContent = `Pokušaj: ${Math.min(nTry,N_MAX)}/${N_MAX} • Poeni: ${nScore}`;
 }
 
-/**********************
- * 9) IGRA 3: ŽIVOTINJE
- **********************/
-// Ako u src-ovima nema "name", izdvoji iz fajl imena:
+
 /**********************
  * 9) IGRA 3: ŽIVOTINJE
  **********************/
@@ -539,76 +536,7 @@ function updateLetterHeader(){
   startBtn.addEventListener('click', renderNew);
 })();
 
-/**********************
- * 12) FILL THE GAPS — dropdown
- **********************/
-(function(){
-  const wrap   = document.getElementById('gapsWrap');
-  const btnChk = document.getElementById('g-check');
-  const btnRes = document.getElementById('g-reset');
-  const score  = document.getElementById('g-score');
-  const result = document.getElementById('g-result');
-  if(!wrap || !btnChk) return;
 
-  const template = `Red, red, touch your ___.
-Blue, blue, touch your ___.
-Green, green, turn ___.
-Yellow, yellow, touch the ___.`;
-  const answers  = ['head','shoe','around','ground'];
-  const DISTRACTORS = ['hand','knee','floor','sky','chair','foot','circle','door','tree','window','room','hair','nose','ear','arm'];
-
-  function shuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]] } return a; }
-
-  function renderDropdowns(){
-    let idx=0;
-    const parts = template.split('___');
-    wrap.innerHTML = '';
-    parts.forEach((p,i)=>{
-      wrap.append(document.createTextNode(p));
-      if(i < parts.length-1){
-        const select = document.createElement('select');
-        select.dataset.index = idx;
-        select.setAttribute('aria-label', `Praznina ${idx+1}`);
-        const correct = answers[idx];
-        const pool = DISTRACTORS.filter(w => w.toLowerCase() !== correct.toLowerCase());
-        const distracts = shuffle(pool).slice(0,3);
-        const options = shuffle([correct, ...distracts]);
-        select.innerHTML = `<option value="">— odaberi —</option>` + options.map(o => `<option value="${o}">${o}</option>`).join('');
-        wrap.appendChild(select);
-        idx++;
-      }
-    });
-    if (score) score.textContent = 'Tačno: 0';
-    if (result){ result.textContent = ''; result.className = 'result'; }
-  }
-
-  function checkDropdowns(){
-    let ok=0;
-    wrap.querySelectorAll('select').forEach(sel=>{
-      const i = Number(sel.dataset.index);
-      const want = (answers[i]||'').toLowerCase();
-      const got  = (sel.value||'').toLowerCase();
-      sel.classList.remove('blank-ok','blank-bad');
-      if(got && got === want){ sel.classList.add('blank-ok'); ok++; }
-      else { sel.classList.add('blank-bad'); }
-    });
-    if (score)  score.textContent  = `Tačno: ${ok} / ${answers.length}`;
-    if (result){
-      result.className = ok===answers.length ? 'result ok' : 'result err';
-      result.textContent = ok===answers.length ? '🎉 Odlično! Sve tačno.' : 'Pokušaj ponovo — proveri crveno obeležene stavke.';
-    }
-  }
-
-  function resetAll(){
-    wrap.querySelectorAll('select').forEach(sel=>{ sel.value = ''; sel.classList.remove('blank-ok','blank-bad'); });
-    if (score)  score.textContent = 'Tačno: 0';
-    if (result){ result.textContent = ''; result.className = 'result'; }
-  }
-
-  btnChk.addEventListener('click', checkDropdowns);
-  btnRes.addEventListener('click', resetAll);
-  renderDropdowns();
-})();
 
 /**********************
  * 12b) PUZZLE (složi reč)
