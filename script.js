@@ -32,7 +32,6 @@ document.addEventListener("DOMContentLoaded", function() {
   function speakWord(word, elem = null) {
     if (!word) return;
     let speakText = "";
-
     if (mode === "sentences") {
       const prefix = (elem && elem.dataset && elem.dataset.prefix) ? elem.dataset.prefix.trim() : "";
 
@@ -56,17 +55,14 @@ document.addEventListener("DOMContentLoaded", function() {
       if (sentence) sentence.textContent = "";
       speakText = word;
     }
-
     const utterance = new SpeechSynthesisUtterance(speakText);
     const britishFemale = voices.find(v => v.lang === "en-GB" && v.name && v.name.toLowerCase().includes("female"));
     if (britishFemale) utterance.voice = britishFemale;
     else {
       const britishAny = voices.find(v => v.lang === "en-GB");
-      if (britishAny) utterance.voice = britishAny; else utterance.lang = "en-GB";
-    }
+      if (britishAny) utterance.voice = britishAny; else utterance.lang = "en-GB";}
     speechSynthesis.cancel();
-    speechSynthesis.speak(utterance);
-  }
+    speechSynthesis.speak(utterance);}
 
   // Klikovi
   document.querySelectorAll(".color-box").forEach(box => {
